@@ -22,7 +22,7 @@
 
 ### Deleted dependencies
 
-- `react-bootstrap-switch` (replaced by the simple Bootstrap Switch: https://reactstrap.github.io/components/form/#Custom-Inputs)
+- `react-bootstrap-switch` (replaced by the simple Bootstrap Switch: <https://reactstrap.github.io/components/form/#Custom-Inputs>)
 
 ### Added dependencies
 
@@ -36,7 +36,6 @@ moment            2.26.0   →   2.29.1
 node-sass         4.14.1   →    5.0.0
 nouislider        14.5.0   →   14.6.4
 react            16.13.1   →   17.0.2
-react-datetime    2.16.3   →    3.0.4
 react-dom        16.13.1   →   17.0.2
 react-scripts      3.4.1   →    4.0.3
 reactstrap         8.4.1   →    8.9.0
@@ -54,13 +53,13 @@ _npm WARN @babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@7.13.12
 
 ### Bug fixing
 
-- https://github.com/creativetimofficial/paper-kit-react/issues/2 (changed the fonts import to `~assets/fonts` and also added assets path inside `jsconfig.json` file)
+- <https://github.com/creativetimofficial/paper-kit-react/issues/2> (changed the fonts import to `~assets/fonts` and also added assets path inside `jsconfig.json` file)
 - Other Paper React products issues solved here as well
-  - https://github.com/creativetimofficial/ct-paper-kit-pro-react/issues/2
-  - https://github.com/creativetimofficial/paper-dashboard-react/issues/15
-  - https://github.com/creativetimofficial/paper-dashboard-react/issues/8
-  - https://github.com/creativetimofficial/ct-paper-dashboard-pro-react/issues/8
-  - https://github.com/creativetimofficial/ct-paper-dashboard-pro-react/issues/6 - solution to this is to change the usage of the ModalHeader from reactstrap to simple Bootstrap ones:
+  - <https://github.com/creativetimofficial/ct-paper-kit-pro-react/issues/2>
+  - <https://github.com/creativetimofficial/paper-dashboard-react/issues/15>
+  - <https://github.com/creativetimofficial/paper-dashboard-react/issues/8>
+  - <https://github.com/creativetimofficial/ct-paper-dashboard-pro-react/issues/8>
+  - <https://github.com/creativetimofficial/ct-paper-dashboard-pro-react/issues/6> - solution to this is to change the usage of the ModalHeader from reactstrap to simple Bootstrap ones:
     So, instead of:
 
 ```
