@@ -100,7 +100,7 @@ const Refugee = () => {
                                     <div className="modal-body">
                                         <p>Privately Sponsored Refugees (PSRs) are refugees who are sponsored by private individuals, groups, or organizations in Canada. Sponsors commit to providing financial, emotional, and settlement support to the refugees for up to one year, including help with housing, food, and other basic needs, as well as language training, employment assistance, and other services to help them integrate into Canadian society. PSRs are often family members or friends of the sponsors, but can also be sponsored by community or faith-based groups.</p>
                                     </div>
-                                    <div className="modal-footer">
+                                    {/* <div className="modal-footer">
                                         <Button
                                             className="btn-link"
                                             color="danger"
@@ -110,7 +110,7 @@ const Refugee = () => {
                                         >
                                             Watch More
                                         </Button>
-                                    </div>
+                                    </div> */}
                                 </Modal>
                             </div>
                         </div>
@@ -148,7 +148,7 @@ const Refugee = () => {
                                     <div className="modal-body">
                                         <p>Blended Visa Office-Referred Refugees (BVORs) are refugees who are referred to Canada by the United Nations Refugee Agency (UNHCR) or other designated referral organizations, and who are resettled in Canada with both financial support from the Canadian government and sponsorship from private individuals, groups or organizations. The government provides up to six months of financial support, while the sponsor provides settlement support for up to one year. This category of refugees is intended to increase the number of refugees resettled in Canada and to encourage private sponsorship.</p>
                                     </div>
-                                    <div className="modal-footer">
+                                    {/* <div className="modal-footer">
                                         <Button
                                             className="btn-link"
                                             color="danger"
@@ -158,7 +158,7 @@ const Refugee = () => {
                                         >
                                             Check PNP Finder
                                         </Button>
-                                    </div>
+                                    </div> */}
                                 </Modal>
                             </div>
                         </div>

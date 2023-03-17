@@ -203,7 +203,7 @@ const Temporary = () => {
                                     <div className="modal-body">
                                         To be a refugee claimant in Canada, you must be physically present in Canada and make a claim for refugee protection. This means that you must believe that you are at risk of persecution or have a well-founded fear of persecution in your home country. To make a claim, you can either present yourself at a Canadian port of entry or make a claim at an inland office. Once your claim is made, you will be given a hearing where you can present your case to the Immigration and Refugee Board of Canada.
                                     </div>
-                                    <div className="modal-footer">
+                                    {/* <div className="modal-footer">
                                         <Button
                                             className="btn-link"
                                             color="danger"
@@ -213,7 +213,7 @@ const Temporary = () => {
                                         >
                                             Check PNP Finder
                                         </Button>
-                                    </div>
+                                    </div> */}
                                 </Modal>
                             </div>
                         </div>
