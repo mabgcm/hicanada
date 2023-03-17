@@ -1,11 +1,11 @@
 import React from "react";
 import { AuthContextProvider } from '../context/AuthContext';
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 // reactstrap components
 
 // core components
-import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import IndexHeader from "components/Headers/IndexHeader.js";
+import IndexNavbar from "../Pages/IndexNavbar";
+import IndexHeader from "../Pages/IndexHeader";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
 // index sections
