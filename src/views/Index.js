@@ -60,7 +60,7 @@ function Index() {
           <Route path='transport' element={<Transport />} />
         </Routes>
 
-        {/* <div className="main">
+        <div className="main">
           <SectionButtons />
           <SectionNavbars />
           <SectionNavigation />
@@ -74,7 +74,7 @@ function Index() {
           <SectionExamples />
           <SectionDownload />
           <DemoFooter />
-        </div> */}
+        </div>
         <Footer />
       </AuthContextProvider>
     </div>

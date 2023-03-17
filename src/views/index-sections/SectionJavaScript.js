@@ -17,8 +17,6 @@
 
 */
 import React from "react";
-// react plugin used to create datetimepicker
-import ReactDatetime from "react-datetime";
 
 // reactstrap components
 import {
@@ -199,31 +197,7 @@ function SectionJavaScript() {
               </UncontrolledPopover>
             </Col>
             <br />
-            <Col md="6">
-              <div className="title">
-                <h3>Datepicker</h3>
-              </div>
-              <Row>
-                <Col sm="6">
-                  <FormGroup>
-                    <InputGroup className="date" id="datetimepicker">
-                      <ReactDatetime
-                        inputProps={{
-                          placeholder: "Datetime Picker Here"
-                        }}
-                      />
-                      <InputGroupAddon addonType="append">
-                        <InputGroupText>
-                          <span className="glyphicon glyphicon-calendar">
-                            <i aria-hidden={true} className="fa fa-calendar" />
-                          </span>
-                        </InputGroupText>
-                      </InputGroupAddon>
-                    </InputGroup>
-                  </FormGroup>
-                </Col>
-              </Row>
-            </Col>
+
             <Col md="6">
               <div className="title">
                 <h3>Tooltips</h3>
