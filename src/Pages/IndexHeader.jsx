@@ -22,7 +22,7 @@ function IndexHeader() {
             <div className="title-brand">
               <h1 className="presentation-title px-5">Welcome to <br /> Canada!</h1>
             </div>
-            <h2 className="presentation-subtitle text-center">
+            <h2 className="presentation-subtitle text-center px-3">
               New to Canada? <br /> We are here to provide you with valuable information and resources to help you navigate your new life in Canada with ease.
             </h2>
           </Container>
