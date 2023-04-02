@@ -1,3 +1,13 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+strong {
+  color: #000000;
+}
+
 .bootstrap-switch {
   display: inline-block;
   direction: ltr;
@@ -9289,4 +9299,52 @@ td.rdtYear:hover {
   top: 1px;
   border-width: 0 0.4rem 0.4rem 0.4rem;
   border-bottom-color: #fff;
+}
+
+.health-pills {
+  height: 50vh;
+}
+
+@media screen and (max-width: 767px) {
+  .health-pills {
+    height: 150px;
+  }
+}
+
+.health-data {
+  height: 50vh;
+  overflow-x: hidden;
+}
+
+.navpill {
+  text-align: left;
+  font-size: small;
+}
+
+@media screen and (max-width: 767px) {
+  .navpill {
+    font-size: 11px;
+  }
+}
+
+.faq {
+  text-align: start;
+  list-style: none;
+}
+
+.faq-h {
+  text-align: start;
+  font-weight: bolder;
+  padding-left: 40px;
+}
+
+.faq-q {
+  font-size: 18px;
+  text-decoration: underline;
+  cursor: pointer
+}
+
+.faq-a {
+  font-size: 16px;
+  font-weight: 500;
 }
