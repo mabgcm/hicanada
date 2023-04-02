@@ -30,8 +30,6 @@ function LandingPageHeader() {
                     backgroundImage: "url(" + require("assets/img/legalstatus.jpeg") + ")"
                 }}
                 className="page-header"
-                data-parallax={true}
-                ref={pageHeader}
             >
                 <div className="filter" />
                 <Container>
