@@ -34,8 +34,8 @@ function LandingPageHeader() {
                 <div className="filter" />
                 <Container>
                     <div className="motto text-center">
-                        <h1>Legal Status in Canada</h1>
-                        <h4><strong>Newcomers: Don't Risk Your Future in Canada - Know Your Legal Status Now!</strong></h4>
+                        <h1 className="text-light">Legal Status in Canada</h1>
+                        <h4><strong className="text-light">Newcomers: Don't Risk Your Future in Canada - Know Your Legal Status Now!</strong></h4>
                         <br />
                         <Button
                             href="https://youtu.be/8mdq1wKedFE"
