@@ -33,6 +33,7 @@ const Coverage = () => {
 
     return (
         <div>
+            <h6 className='text-danger'>medical insurance coverage</h6>
             <h5><strong>The coverage provided by the provincial/territorial health insurance plan in Canada can vary slightly from province to province, but generally includes essential medical services such as doctor's visits, hospitalization, prescription drugs, and medical procedures.</strong></h5>
             <Container className='mt-5'>
                 <Row className="text-center">

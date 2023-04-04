@@ -1,8 +1,7 @@
-
 import React from "react";
 import { Button, Container } from "reactstrap";
 
-function HealthHeader() {
+const EduHeader = () => {
     let pageHeader = React.createRef();
 
     React.useEffect(() => {
@@ -23,25 +22,25 @@ function HealthHeader() {
         <>
             <div
                 style={{
-                    backgroundImage: "url(" + require("assets/img/healthcare.jpeg") + ")"
+                    backgroundImage: "url(" + require("assets/img/eduheader.jpg") + ")"
                 }}
                 className="page-header"
             >
                 <div className="filter" />
                 <Container>
                     <div className="motto text-center">
-                        <h1 className="text-light">Healthcare in Canada</h1>
-                        <h4><strong className="text-light">New to Canada? Here's everything you need to know about healthcare!</strong></h4>
+                        <h1 className="text-light">Education in Canada</h1>
+                        <h4><strong className="text-light">With these insider tips, you can unlock the secrets of Canada's education system and transform your academic journey!</strong></h4>
                         <br />
                         <Button
-                            href="https://youtu.be/Zx_y8rcYm_M"
+                            href="https://www.youtube.com/watch?v=DC0fTMJKzlc"
                             className="btn-round mr-1"
                             color="neutral"
                             target="_blank"
                             outline
                         >
                             <i className="fa fa-play" />
-                            Have an Idea
+                            Overview
                         </Button>
                     </div>
                 </Container>
@@ -50,4 +49,4 @@ function HealthHeader() {
     );
 }
 
-export default HealthHeader;
+export default EduHeader

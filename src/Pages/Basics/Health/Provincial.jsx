@@ -31,6 +31,7 @@ const Provincial = () => {
     };
     return (
         <>
+            <h6 className='text-danger'>provincial insurance</h6>
             <h5 className='faq'>Provincial/Territorial Health Insurance (also known as Medicare) is a publicly funded healthcare system in Canada that provides access to necessary medical services to all residents of a province or territory. Each province or territory in Canada has its own health insurance plan that covers basic medical services, including, </h5>
             <ul>
                 <li className='faq'><h5>doctor visits,</h5></li>

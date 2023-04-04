@@ -17,7 +17,7 @@ import Pocket from './Pocket';
 import Emergency from './Emergency';
 import Family from './Family';
 import Mental from './Mental';
-import Multilingual from './Multilingual';
+import Walkin from './Walkin';
 
 const Health = () => {
 
@@ -119,22 +119,22 @@ const Health = () => {
                                         <NavLink
                                             className={activeTab === "7" ? "active" : ""}
                                             onClick={() => {
-                                                toggle("7");
+                                                toggle("8");
                                             }}
                                         >
                                             <h6 style={{ cursor: 'pointer', color: '#F33816', transition: 'color 0.2s ease-in-out' }} onMouseOver={e => e.target.style.color = '#DF2402'}
-                                                onMouseOut={e => e.target.style.color = '#F33816'}>Mental Health</h6>
+                                                onMouseOut={e => e.target.style.color = '#F33816'}>Walk-in Clinics</h6>
                                         </NavLink>
                                     </NavItem>
                                     <NavItem className='navpill'>
                                         <NavLink
                                             className={activeTab === "7" ? "active" : ""}
                                             onClick={() => {
-                                                toggle("8");
+                                                toggle("7");
                                             }}
                                         >
                                             <h6 style={{ cursor: 'pointer', color: '#F33816', transition: 'color 0.2s ease-in-out' }} onMouseOver={e => e.target.style.color = '#DF2402'}
-                                                onMouseOut={e => e.target.style.color = '#F33816'}>Multilingual Services</h6>
+                                                onMouseOut={e => e.target.style.color = '#F33816'}>Mental Health</h6>
                                         </NavLink>
                                     </NavItem>
                                 </Nav>
@@ -172,7 +172,7 @@ const Health = () => {
                                 </TabPane>
 
                                 <TabPane tabId="8">
-                                    <Multilingual />
+                                    <Walkin />
                                 </TabPane>
 
                             </TabContent>
