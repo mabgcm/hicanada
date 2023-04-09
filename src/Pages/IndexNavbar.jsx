@@ -243,7 +243,7 @@ function IndexNavbar() {
             <NavItem style={{ width: 40 }}>
               <NavLink
                 data-placement="bottom"
-                href="https://www.youtube.com/channel/UCkoUxtGZogTN1g7_m2ljzXg"
+                href="https://www.youtube.com/channel/UC7bDtwI1tXrqTLYWa09NWFQ"
                 target="_blank"
                 title="Follow us on Instagram"
               >
