@@ -3,7 +3,8 @@ import React from "react";
 
 // reactstrap components
 import { Container } from "reactstrap";
-import '../assets/css/paper-kit.css'
+import '../assets/css/paper-kit.css';
+import IndexLanding from "./IndexLanding";
 // core components
 
 function IndexHeader() {
@@ -33,20 +34,8 @@ function IndexHeader() {
             backgroundImage: "url(" + require("assets/img/clouds.png") + ")"
           }}
         />
-        {/* <h6 className="category category-absolute">
-          Designed and coded by{" "}
-          <a
-            href="https://www.creative-tim.com?ref=pkr-index-page"
-            target="_blank"
-          >
-            <img
-              alt="..."
-              className="creative-tim-logo"
-              src={require("assets/img/creative-tim-white-slim2.png")}
-            />
-          </a>
-        </h6> */}
       </div>
+      <IndexLanding />
     </>
   );
 }

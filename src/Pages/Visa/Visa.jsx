@@ -9,6 +9,7 @@ import {
     Nav,
     TabContent,
     TabPane,
+    Button,
 } from "reactstrap";
 
 // core components
@@ -48,54 +49,55 @@ function LandingPage() {
                 <div className="nav-tabs-navigation">
                     <div className="nav-tabs-wrapper">
                         <Nav id="tabs" role="tablist" tabs>
-                            <NavItem>
+                            <NavItem className="col-12 col-sm">
                                 <NavLink
-                                    className={activeTab === "1" ? "active" : ""}
+                                    // className={activeTab === "1" ? "active" : ""}
                                     onClick={() => {
                                         toggle("1");
                                     }}
                                 >
-                                    <h6 style={{ cursor: 'pointer' }}>Permanent Residents</h6>
+                                    <Button className="btn-round mr-1" color="danger outline" style={{ whiteSpace: 'nowrap' }}>Permanent Residents</Button>
+                                    {/* <h6 style={{ cursor: 'pointer' }}>Permanent Residents</h6> */}
                                 </NavLink>
                             </NavItem>
-                            <NavItem>
+                            <NavItem className="col-12 col-sm">
                                 <NavLink
-                                    className={activeTab === "2" ? "active" : ""}
+                                    // className={activeTab === "2" ? "active" : ""}
                                     onClick={() => {
                                         toggle("2");
                                     }}
-                                >
-                                    <h6 style={{ cursor: 'pointer' }}>Temporary Residents</h6>
+                                ><Button className="btn-round mr-1" color="danger outline" style={{ whiteSpace: 'nowrap' }}>Temporary Residents</Button>
+                                    {/* <h6 style={{ cursor: 'pointer' }}>Temporary Residents</h6> */}
                                 </NavLink>
                             </NavItem>
-                            <NavItem>
+                            <NavItem className="col-12 col-sm">
                                 <NavLink
-                                    className={activeTab === "3" ? "active" : ""}
+                                    // className={activeTab === "3" ? "active" : ""}
                                     onClick={() => {
                                         toggle("3");
                                     }}
-                                >
-                                    <h6 style={{ cursor: 'pointer' }}>Refugees</h6>
+                                ><Button className="btn-round mr-1" color="danger outline" style={{ whiteSpace: 'nowrap' }}>Refugees</Button>
+                                    {/* <h6 style={{ cursor: 'pointer' }}>Refugees</h6> */}
                                 </NavLink>
                             </NavItem>
-                            <NavItem>
+                            <NavItem className="col-12 col-sm">
                                 <NavLink
-                                    className={activeTab === "4" ? "active" : ""}
+                                    // className={activeTab === "4" ? "active" : ""}
                                     onClick={() => {
                                         toggle("4");
                                     }}
-                                >
-                                    <h6 style={{ cursor: 'pointer' }}>Asylum Seekers</h6>
+                                ><Button className="btn-round mr-1" color="danger outline" style={{ whiteSpace: 'nowrap' }}>Asylum Seekers</Button>
+                                    {/* <h6 style={{ cursor: 'pointer' }}>Asylum Seekers</h6> */}
                                 </NavLink>
                             </NavItem>
-                            <NavItem>
+                            <NavItem className="col-12 col-sm">
                                 <NavLink
-                                    className={activeTab === "5" ? "active" : ""}
+                                    // className={activeTab === "5" ? "active" : ""}
                                     onClick={() => {
                                         toggle("5");
                                     }}
-                                >
-                                    <h6 style={{ cursor: 'pointer' }}>Irregular Migrants</h6>
+                                ><Button className="btn-round mr-1" color="danger outline" style={{ whiteSpace: 'nowrap' }}>Irregular Migrants</Button>
+                                    {/* <h6 style={{ cursor: 'pointer' }}>Irregular Migrants</h6> */}
                                 </NavLink>
                             </NavItem>
                         </Nav>
