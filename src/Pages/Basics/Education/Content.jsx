@@ -1,36 +1,14 @@
-
 import React, { useEffect, useState } from 'react';
-import '../../assets/css/paper-kit.css';
+import '../../../assets/css/index.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Helmet } from 'react-helmet';
-
-// reactstrap components
-import {
-    NavItem,
-    Nav,
-    TabContent,
-    TabPane,
-} from "reactstrap";
+import { Nav, NavItem, TabContent, TabPane } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import Modinest from './System';
+import { FaAccessibleIcon } from 'react-icons/fa';
+import Schooling from './Schooling';
 
-// core components
-import VisaHeader from "./VisaHeader.jsx";
-import Irregular from "./Irregular";
-import Asylum from "./Asylum";
-import Refugee from "./Refugee";
-import Temporary from "./Temporary";
-import Permanent from "./Permanent";
-
-
-function LandingPage() {
-    document.documentElement.classList.remove("nav-open");
-    React.useEffect(() => {
-        document.body.classList.add("profile-page");
-        return function cleanup() {
-            document.body.classList.remove("profile-page");
-        };
-    });
+const Content = () => {
 
     useEffect(() => {
         AOS.init({
@@ -55,7 +33,7 @@ function LandingPage() {
         }
     };
 
-    const [activeDiv, setActiveDiv] = useState('div1');
+    const [activeDiv, setActiveDiv] = useState(null);
 
     const handleDivClick = (divId) => {
         setActiveDiv(divId);
@@ -88,26 +66,14 @@ function LandingPage() {
         return baseStyle;
     };
 
-
     return (
-        <>
-            <Helmet>
-                <title>Visa and Status Guide for Newcomers to Canada | HiCanada</title>
-                <meta name="description" content="Get valuable tips and information about visas and status for newcomers to Canada. Learn about the immigration process, visa types, work permits, and more." />
-                <meta name="keywords" content="newcomers to Canada, visa guide, immigration process, visa types, work permits, status in Canada" />
-                <meta property="og:title" content="Visa and Status Guide for Newcomers to Canada | HiCanada" />
-                <meta property="og:description" content="Get valuable tips and information about visas and status for newcomers to Canada. Learn about the immigration process, visa types, work permits, and more." />
-
-            </Helmet>
-            <VisaHeader />
+        <div>
             <div className="main mt-3">
-                <div className=" text-center px-5 mb-4">
-                    <p><strong>The legal status of newcomers can have a significant impact on their rights, access to services, and ability to work and travel. If you are a newcomer to Canada, it's important to understand your legal status and the conditions that apply to your stay in the country.</strong></p>
-                </div>
+
                 <div className="nav-tabs-navigation">
                     <div className="container nav-tabs-wrapper" data-aos="fade-up">
                         <Nav className="nav nav-tabs row gy-4 d-flex" id="tabs" role="tablist" tabs>
-                            <NavItem className="nav-item col-12 col-sm">
+                            <NavItem className="nav-item col-sm-12 col-md-3">
                                 <NavLink
                                     onClick={() => {
                                         toggle("1");
@@ -117,16 +83,15 @@ function LandingPage() {
                                         onClick={() => handleDivClick('div1')}
                                         className={`nav-link mb-3 show ${getDivClassName('div1')}`}>
                                         <a className="nav-link show">
-                                            {/* <FaAccessibleIcon style={{ color: 'red', fontSize: '24px' }} /> */}
-                                            <h5 className={isDivActive('div1') ? 'text-light font-weight-bold' : ''}>Permanent Residents</h5>
+                                            <h6 className={isDivActive('div1') ? 'text-light font-weight-bold' : ''}>Education System</h6>
                                         </a>
                                     </div>
-
                                 </NavLink>
                             </NavItem>
 
-                            <NavItem className="nav-item col-12 col-sm">
+                            <NavItem className="nav-item col-sm-12 col-md-3">
                                 <NavLink
+                                    // className={activeTab === "1" ? "active" : ""}
                                     onClick={() => {
                                         toggle("2");
                                     }}
@@ -135,16 +100,15 @@ function LandingPage() {
                                         onClick={() => handleDivClick('div2')}
                                         className={`nav-link mb-3 show ${getDivClassName('div2')}`}>
                                         <a className="nav-link show">
-                                            {/* <FaAccessibleIcon style={{ color: 'red', fontSize: '24px' }} /> */}
-                                            <h5 className={isDivActive('div2') ? 'text-light font-weight-bold' : ''}>Temporary Residents</h5>
+                                            <h6 className={isDivActive('div2') ? 'text-light font-weight-bold' : ''}>Schooling in Canada</h6>
                                         </a>
                                     </div>
-
                                 </NavLink>
                             </NavItem>
 
-                            <NavItem className="nav-item col-12 col-sm">
+                            <NavItem className="nav-item col-sm-12 col-md-3">
                                 <NavLink
+                                    // className={activeTab === "1" ? "active" : ""}
                                     onClick={() => {
                                         toggle("3");
                                     }}
@@ -153,16 +117,15 @@ function LandingPage() {
                                         onClick={() => handleDivClick('div3')}
                                         className={`nav-link mb-3 show ${getDivClassName('div3')}`}>
                                         <a className="nav-link show">
-                                            {/* <FaAccessibleIcon style={{ color: 'red', fontSize: '24px' }} /> */}
-                                            <h5 className={isDivActive('div3') ? 'text-light font-weight-bold' : ''}>Refugees</h5>
+                                            <h6 className={isDivActive('div3') ? 'text-light font-weight-bold' : ''}>universities and colleges</h6>
                                         </a>
                                     </div>
-
                                 </NavLink>
                             </NavItem>
 
-                            <NavItem className="nav-item col-12 col-sm">
+                            <NavItem className="nav-item col-sm-12 col-md-3">
                                 <NavLink
+                                    // className={activeTab === "1" ? "active" : ""}
                                     onClick={() => {
                                         toggle("4");
                                     }}
@@ -171,16 +134,15 @@ function LandingPage() {
                                         onClick={() => handleDivClick('div4')}
                                         className={`nav-link mb-3 show ${getDivClassName('div4')}`}>
                                         <a className="nav-link show">
-                                            {/* <FaAccessibleIcon style={{ color: 'red', fontSize: '24px' }} /> */}
-                                            <h5 className={isDivActive('div4') ? 'text-light font-weight-bold' : ''}>Asylum Seekers</h5>
+                                            <h6 className={isDivActive('div4') ? 'text-light font-weight-bold' : ''}>Education credentials</h6>
                                         </a>
                                     </div>
-
                                 </NavLink>
                             </NavItem>
 
-                            <NavItem className="nav-item col-12 col-sm">
+                            <NavItem className="nav-item col-sm-12 col-md-3">
                                 <NavLink
+                                    // className={activeTab === "1" ? "active" : ""}
                                     onClick={() => {
                                         toggle("5");
                                     }}
@@ -189,11 +151,60 @@ function LandingPage() {
                                         onClick={() => handleDivClick('div5')}
                                         className={`nav-link mb-3 show ${getDivClassName('div5')}`}>
                                         <a className="nav-link show">
-                                            {/* <FaAccessibleIcon style={{ color: 'red', fontSize: '24px' }} /> */}
-                                            <h5 className={isDivActive('div5') ? 'text-light font-weight-bold' : ''}>Irregular Migrants</h5>
+                                            <h6 className={isDivActive('div5') ? 'text-light font-weight-bold' : ''}>Financial assistance</h6>
                                         </a>
                                     </div>
+                                </NavLink>
+                            </NavItem>
 
+                            <NavItem className="nav-item col-sm-12 col-md-3">
+                                <NavLink
+                                    // className={activeTab === "1" ? "active" : ""}
+                                    onClick={() => {
+                                        toggle("6");
+                                    }}
+                                >
+                                    <div style={getDivStyle('div6')}
+                                        onClick={() => handleDivClick('div6')}
+                                        className={`nav-link mb-3 show ${getDivClassName('div6')}`}>
+                                        <a className="nav-link show">
+                                            <h6 className={isDivActive('div6') ? 'text-light font-weight-bold' : ''}>Education for Immigrants</h6>
+                                        </a>
+                                    </div>
+                                </NavLink>
+                            </NavItem>
+
+                            <NavItem className="nav-item col-sm-12 col-md-3">
+                                <NavLink
+                                    // className={activeTab === "1" ? "active" : ""}
+                                    onClick={() => {
+                                        toggle("7");
+                                    }}
+                                >
+                                    <div style={getDivStyle('div7')}
+                                        onClick={() => handleDivClick('div7')}
+                                        className={`nav-link mb-3 show ${getDivClassName('div7')}`}>
+                                        <a className="nav-link show">
+                                            <h6 className={isDivActive('div7') ? 'text-light font-weight-bold' : ''}>Visas and Study Permits</h6>
+                                        </a>
+                                    </div>
+                                </NavLink>
+                            </NavItem>
+
+                            <NavItem className="nav-item col-sm-12 col-md-3">
+                                <NavLink
+                                    // className={activeTab === "1" ? "active" : ""}
+                                    onClick={() => {
+                                        toggle("8");
+                                    }}
+                                >
+                                    <div style={getDivStyle('div8')}
+                                        onClick={() => handleDivClick('div8')}
+                                        className={`nav-link mb-3 show ${getDivClassName('div8')}`}>
+                                        <a className="nav-link show">
+                                            <h6 className={isDivActive('div8') ? 'text-light font-weight-bold' : ''}>Education Policies & Regulations</h6>
+                                        </a>
+                                    </div>
                                 </NavLink>
                             </NavItem>
 
@@ -203,29 +214,16 @@ function LandingPage() {
                 <TabContent activeTab={activeTab} className="px-4">
 
                     <TabPane tabId="1">
-                        <Permanent />
+                        <Modinest />
                     </TabPane>
 
                     <TabPane tabId="2">
-                        <Temporary />
+                        <Schooling />
                     </TabPane>
-
-                    <TabPane tabId="3">
-                        <Refugee />
-                    </TabPane>
-
-                    <TabPane tabId="4">
-                        <Asylum />
-                    </TabPane>
-
-                    <TabPane tabId="5">
-                        <Irregular />
-                    </TabPane>
-
                 </TabContent>
             </div>
-        </>
-    );
+        </div>
+    )
 }
 
-export default LandingPage;
+export default Content

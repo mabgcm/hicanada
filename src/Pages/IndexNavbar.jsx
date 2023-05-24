@@ -1,5 +1,6 @@
 import React from "react";
 import { UserAuth } from '../context/AuthContext';
+import '../assets/css/paper-kit.css';
 
 // nodejs library that concatenates strings
 import classnames from "classnames";
