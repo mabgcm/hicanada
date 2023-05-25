@@ -204,6 +204,14 @@ const Permanent = () => {
                         </div>
                     </Col>
                 </Row>
+                <Button
+                    className="btn-round mt-5"
+                    color="danger"
+                    href="https://www.canadianimmigrationinstitute.com/a/2147498111/FffW7Mvb"
+                    target='_blank'
+                >
+                    Immigration Eligibility Courses
+                </Button>
             </Container>
         </div>
     )
