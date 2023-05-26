@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from 'reactstrap'
 
 const Family = () => {
     return (
@@ -13,6 +14,12 @@ const Family = () => {
                 <li className=''><p><strong>Consider registering with a walk-in clinic, which may be able to provide you with continuity of care until you find a family doctor.</strong></p></li>
             </ol>
             <p className='mt-4 text-left'><strong>When visiting a family doctor for the first time, it's important to bring your health card and any relevant medical information from your previous doctor, if applicable. During the appointment, the doctor will likely ask about your medical history, any current symptoms or concerns, and may conduct a physical examination. They may also provide advice on preventative health measures, such as vaccinations and screening tests.</strong></p>
+            <Button
+                href='https://793775jaejkclycdp8q1yezafd.hop.clickbank.net'
+                target='_blank'
+                className='btn-danger'>
+                Weight Control
+            </Button>
 
         </div>
     )
