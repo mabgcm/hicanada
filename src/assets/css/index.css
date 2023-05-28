@@ -1,6 +1,40 @@
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
+.bold900 {
+    color: black;
+    font-weight: 600;
+}
+
+.bold600 {
+    color: black;
+    font-weight: 900;
+}
+
+.bold300 {
+    color: black;
+    font-weight: 300;
+}
+
+.bold {
+    color: black;
+}
+
+@media (max-width: 991px) {
+    .inner-nav-text {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 
 /*--------------------------------------------------------------
   # Preloader
@@ -44,6 +78,12 @@
         top: calc(50% - 36px);
         left: calc(50% - 36px);
         opacity: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .health-welcome {
+        text-align: start;
     }
 }
 
@@ -790,7 +830,7 @@ section {
   --------------------------------------------------------------*/
 .about .about-img {
     position: relative;
-    margin: 60px 0 0 60px;
+    margin: 0 0 0 60px;
 }
 
 .about .about-img:before {
@@ -798,7 +838,6 @@ section {
     inset: -60px 0 0 -60px;
     z-index: -1;
     content: "";
-    /* background: url("../img/about-bg.png") top left; */
     background-repeat: no-repeat;
 }
 
@@ -834,7 +873,7 @@ section {
     margin-left: 40px;
 }
 
-.about .nav-link {
+/* .about .nav-link {
     background: none;
     font-size: 18px;
     font-weight: 400;
@@ -843,18 +882,12 @@ section {
     margin-bottom: -2px;
     border-radius: 0;
     font-family: var(--font-secondary);
-}
+} */
 
 .about .nav-link.active {
     color: var(--color-primary);
     background: none;
     border-bottom: 3px solid var(--color-primary);
-}
-
-@media (max-width: 575px) {
-    .about .nav-link {
-        font-size: 16px;
-    }
 }
 
 .about .tab-content h4 {
@@ -869,6 +902,10 @@ section {
     line-height: 0;
     margin-right: 8px;
     color: var(--color-primary);
+}
+
+.overview p {
+    text-align: start;
 }
 
 /*--------------------------------------------------------------

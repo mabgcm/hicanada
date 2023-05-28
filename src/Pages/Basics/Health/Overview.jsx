@@ -1,6 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Collapse from 'react-bootstrap/Collapse';
+import { GiCheckMark } from 'react-icons/gi';
 import { Button } from 'reactstrap';
+import '../../../assets/css/index.css';
+import ad from '../../../assets/img/livpur.jpg'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Overview = () => {
     const [open1, setOpen1] = useState(false);
@@ -13,18 +18,95 @@ const Overview = () => {
     const [open8, setOpen8] = useState(false);
     const [open9, setOpen9] = useState(false);
     const [open10, setOpen10] = useState(false);
+
+    useEffect(() => {
+        AOS.init({
+            // Global settings
+            duration: 800,  // Duration of animations
+            once: true,     // Only animate elements once
+
+            // Customize animations per element
+            offset: 120,    // Offset (in pixels) from the original trigger point
+            delay: 100,     // Delay animation (in milliseconds)
+            easing: 'ease', // Easing function
+        });
+
+        // Optional: Refresh AOS when your React component updates
+        AOS.refresh();
+    }, []);
+
+    const iconstyle = {
+        fontSize: '25px',
+        color: 'red',
+    }
     return (
         <>
             <div className='w-100'>
-                <h5 className="description mt-3">
-                    <strong>Are you curious about how healthcare works in Canada?  Well, you're in for a treat! </strong>
-                </h5>
-                <h5 className="description mt-3">
-                    <strong>The Canadian healthcare system is publicly funded and offers universal access to medical services to all residents of the country, regardless of their legal status. This means that <em className='text-dark'>Canadian citizens, permanent residents, refugees, and even some temporary residents</em>  are all eligible for healthcare coverage.</strong>
-                </h5>
-                <h5 className="description mt-3">
-                    <strong>The healthcare services offered may vary based on the province or territory and legal status, but generally include preventive care, diagnostic tests, hospitalization, prescription drugs, and emergency care. Although the system aims to provide equal access to healthcare, some services may not be entirely covered, and individuals may have to bear out-of-pocket expenses or opt for private health insurance.</strong>
-                </h5>
+                <section id="about" class="about">
+                    <div class="container" data-aos="fade-up">
+
+                        <div class="section-header">
+                            <h2 className='text-dark'>Welcome to Canada's Healthcare Guide for Newcomers!</h2>
+                            <h4>We are here to provide you with essential information about Canada's healthcare system and guide you through the process of accessing quality healthcare services.</h4>
+                            <h4>Whether you are a newcomer, a student, or a recent immigrant, our comprehensive resources will help you navigate the Canadian healthcare landscape with ease.</h4>
+                        </div>
+
+                        <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
+
+                            <div class="col-lg-5">
+                                <div class="about-img">
+                                    <a href="https://69ff7cjzg8l4cocksfyszaetcd.hop.clickbank.net/?tid=overview" target='_blank'><img src={ad} class="img-fluid" alt="Canada's diverse health system" /></a>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-7">
+                                <div class="tab-content">
+
+                                    <div class='overview'>
+
+                                        <h5 class="d-flex align-items-start mt-3 bold600">Key Benefits of Canada's Healthcare System:</h5>
+
+                                        <div class="d-flex align-items-start mt-4">
+                                            <GiCheckMark style={iconstyle} />
+                                            <h4>Universal Coverage</h4>
+                                        </div>
+                                        <p class='d-flex align-items-start'>Canada's healthcare system provides universal coverage, ensuring that essential medical services are available to all residents regardless of their income or immigration status.</p>
+
+                                        <div class="d-flex align-items-center mt-4">
+                                            <GiCheckMark style={iconstyle} />
+                                            <h4>Comprehensive Care</h4>
+                                        </div>
+                                        <p>From primary healthcare to specialized treatments, Canada offers a wide range of medical services to meet your needs.</p>
+
+                                        <div class="d-flex align-items-center mt-4">
+                                            <GiCheckMark style={iconstyle} />
+                                            <h4>High-Quality Standards</h4>
+                                        </div>
+                                        <p>Canada has a reputation for delivering high-quality healthcare services, with well-trained medical professionals and state-of-the-art facilities.</p>
+
+                                        <div class="d-flex align-items-center mt-4">
+                                            <GiCheckMark style={iconstyle} />
+                                            <h4>Focus on Prevention</h4>
+                                        </div>
+                                        <p>Canada emphasizes preventive care, promoting a healthy lifestyle and regular check-ups to detect and address health issues early on.</p>
+
+                                        <div class="d-flex align-items-center mt-4">
+                                            <GiCheckMark style={iconstyle} />
+                                            <h4>Multilingual Support</h4>
+                                        </div>
+                                        <p>Many healthcare facilities in Canada provide language interpretation services, ensuring that language barriers do not hinder your access to care.</p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section>
                 <Button
                     className="btn-round mt-3"
                     color="danger"

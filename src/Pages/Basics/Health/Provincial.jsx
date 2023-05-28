@@ -1,7 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Modal, Row } from 'reactstrap';
 import Collapse from 'react-bootstrap/Collapse';
-
+import { GiCheckMark } from 'react-icons/gi';
+import '../../../assets/css/index.css';
+import ad from '../../../assets/img/gliko.png'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Coverage from './Coverage';
 
 const Provincial = () => {
 
@@ -29,17 +34,83 @@ const Provincial = () => {
     const toggleModal3 = () => {
         setModal3(!modal3);
     };
+
+    useEffect(() => {
+        AOS.init({
+            // Global settings
+            duration: 800,  // Duration of animations
+            once: true,     // Only animate elements once
+
+            // Customize animations per element
+            offset: 120,    // Offset (in pixels) from the original trigger point
+            delay: 100,     // Delay animation (in milliseconds)
+            easing: 'ease', // Easing function
+        });
+
+        // Optional: Refresh AOS when your React component updates
+        AOS.refresh();
+    }, []);
+
+    const iconstyle = {
+        fontSize: '25px',
+        color: 'red',
+    }
+
     return (
         <>
-            <h6 className='text-danger'>provincial insurance</h6>
-            <h5 className='faq'>Provincial/Territorial Health Insurance (also known as Medicare) is a publicly funded healthcare system in Canada that provides access to necessary medical services to all residents of a province or territory. Each province or territory in Canada has its own health insurance plan that covers basic medical services, including, </h5>
-            <ul>
-                <li className='faq'><h5>doctor visits,</h5></li>
-                <li className='faq'><h5>hospitalization,</h5></li>
-                <li className='faq'><h5>diagnostic tests,</h5></li>
-                <li className='faq'><h5>and emergency care.</h5></li>
-            </ul>
-            <h5 className='faq'>In this guide, we will provide an overview of how to apply for Provincial/Territorial Health Insurance and where to apply for it province by province.</h5>
+            <section id="about" class="about">
+                <div class="container" data-aos="fade-up">
+
+                    <div class="section-header">
+                        <h2 className='text-dark'>Understanding Canada's Health Insurance System</h2>
+                        <h4>In this section, we provide a comprehensive overview of Canada's health insurance system. Understanding how health insurance works in Canada is essential for newcomers to ensure they have access to the healthcare services they need. We will explore the key components, eligibility criteria, and benefits of Canada's health insurance system.</h4>
+                        <h4>Let's dive into the details of Canada's health insurance coverage.</h4>
+                    </div>
+
+                    <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="col-lg-5">
+                            <div class="about-img">
+                                <a href="https://866db8l7qkqcfw3dwfp9wc4l1u.hop.clickbank.net/?tid=gliko" target='_blank'><img src={ad} class="img-fluid" alt="Canada's diverse health system" /></a>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7">
+                            <div class="tab-content">
+
+                                <div class='overview'>
+
+                                    <h5 class="d-flex align-items-start mt-3 bold600">Key Components of Canada's Health Insurance System:</h5>
+
+                                    <div class="d-flex align-items-start mt-4">
+                                        <GiCheckMark style={iconstyle} />
+                                        <h4>Provincial and Territorial Coverage</h4>
+                                    </div>
+                                    <p class='d-flex align-items-start'>Canada's health insurance system is administered at the provincial and territorial levels. Each province and territory has its own health insurance plan, often referred to as a provincial health card. These plans cover necessary medical services, including doctor visits, hospital care, and some diagnostic tests.</p>
+
+                                    <div class="d-flex align-items-center mt-4">
+                                        <GiCheckMark style={iconstyle} />
+                                        <h4>Universal Coverage</h4>
+                                    </div>
+                                    <p>One of the key principles of Canada's health insurance system is universal coverage. This means that all Canadian residents, including newcomers and immigrants with permanent residency or certain visa statuses, are eligible for health insurance coverage. Universal coverage ensures that everyone has access to necessary healthcare services without financial barriers.</p>
+
+                                    <div class="d-flex align-items-center mt-4">
+                                        <GiCheckMark style={iconstyle} />
+                                        <h4>Eligibility Criteria</h4>
+                                    </div>
+                                    <p>Eligibility for health insurance coverage varies slightly between provinces and territories. Generally, newcomers are required to fulfill certain residency requirements, such as establishing their primary residence in a province or territory and having a valid immigration status. It's important to check the specific eligibility criteria of the province or territory where you reside.</p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
             <Container>
                 <Row>
                     <Col md="12">
@@ -241,6 +312,7 @@ const Provincial = () => {
                     </Collapse>
                 </li>
             </ul>
+            <Coverage />
         </>
     )
 }
